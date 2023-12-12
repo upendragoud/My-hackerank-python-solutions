@@ -1,0 +1,29 @@
+al = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+      'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+def print_rangoli(size):
+    # your code goes here
+    O = []
+    O.append((al[n-1].center(((n*2-1)+(n*2-2)), '-')))
+    for i in range(1, n+1):
+        # if i == 1:
+        #     print(al[n].center((n*2-1)+(n*2 - 2)), '-')
+        if i > 1 and i <= n:
+            a = al[n-i:n]
+            l = "-".join(a)
+            L = l[::-1]
+            b = (L+l[1:])
+            c = b.center(((n*2-1)+(n*2 - 2)), '-')
+            # print(c)
+            O.append(c)
+        # elif i == n:
+        #     l = "-".join(al[:n])
+        #     z = (l + l[-2::-1])
+        #     O.append(z)
+    # print(O)
+    l = O[::-1]
+    for i in (O):
+        print(i)
+    l = O[::-1]
+    for i in l[1:]:
+        print(i)
+

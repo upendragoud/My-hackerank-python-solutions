@@ -1,0 +1,14 @@
+
+
+def print_from_stream(n, stream=None):
+    
+    if stream is None or isinstance(stream, EvenStream):
+        stream = EvenStream()
+        for _ in range(n):
+            print(stream.get_next())
+    
+    elif isinstance(stream, OddStream):
+        stream = OddStream()
+        for _ in  range(n):
+            print(stream.get_next())
+

@@ -1,0 +1,16 @@
+
+from operator import itemgetter
+
+def person_lister(f):
+    def inner(people):
+        # complete the function
+        result = []
+        for i in range(len(people)):
+            people[i][2] = int(people[i][2])
+        people.sort(key=itemgetter(2))
+        for i in people:
+            result.append(f(i))
+
+        return result
+    return inner
+

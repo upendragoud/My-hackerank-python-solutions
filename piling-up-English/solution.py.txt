@@ -1,0 +1,11 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+for _ in range(int(input())):
+        n = int(input())
+        blocks = list(map(int,input().split()))
+        min_index = blocks.index(min(blocks))
+        A_block = blocks[:min_index]
+        B_block = blocks[min_index:]
+        if sorted(A_block,reverse=True) == A_block and sorted(B_block) == B_block:
+                print("Yes")
+        else:
+                print("No")

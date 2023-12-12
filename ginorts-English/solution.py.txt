@@ -1,0 +1,23 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+s = input()
+a = sorted(list(s))
+# print(a)
+d = []
+l = []
+u = []
+o = []
+e = []
+for i in a:
+    if (i.isdigit()):
+        d.append(i)
+    elif i.islower():
+        l.append(i)
+    elif i.isupper():
+        u.append(i)
+for i in d:
+    if int(i)%2 != 0:
+        o.append(i)
+    else:
+        e.append(i)
+b = ("".join(l)+"".join(u)+"".join(o)+"".join(e))
+print(b)

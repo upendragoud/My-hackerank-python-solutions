@@ -1,0 +1,10 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+N,X = list(map(int, input().split()))
+Z = []
+for i in range(X):
+ A = list(map(eval, input().split()))
+ Z.append(A)
+
+y = [y for y in zip(*Z)]
+for i in y:
+ print(sum(i)/len(i))

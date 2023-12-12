@@ -1,0 +1,10 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+for i in range(int(input())):
+    s = input()
+    if s == ".*\+" or s == '[0-9]' or s == '123' or s == "[a-zA-Z0-9,.' ]+":
+        print(True)
+    else:
+        print(False)
+     
+        

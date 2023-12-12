@@ -1,0 +1,4 @@
+regex_integer_in_range = r"([0-9]{6}\Z)"	# Do not delete 'r'.
+regex_alternating_repetitive_digit_pair = r"(\d)(?=\d\1)"	# Do not delete 'r'.
+
+

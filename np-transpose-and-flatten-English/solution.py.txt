@@ -1,0 +1,14 @@
+import numpy
+
+
+
+N,M = list(map(int, input().split()))
+n = []
+m = numpy.array(n)
+for i in range(N):
+    a = list(map(int, input().split()))
+    # print(a)
+#     a.remove(',')
+    n.append(a)
+print(numpy.transpose(numpy.array(n)))
+print((numpy.array(n)).flatten())

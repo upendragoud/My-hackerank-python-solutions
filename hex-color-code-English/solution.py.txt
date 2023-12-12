@@ -1,0 +1,11 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+
+regex_pattern = r'(?<!^)(#(?:[\dA-Fa-f]{3}){1,2})'
+
+n = int(input())
+
+for _ in range(n):
+    m = re.findall(regex_pattern, input())
+    if m:
+        [print(code) for code in m]

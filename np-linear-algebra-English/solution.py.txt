@@ -1,0 +1,8 @@
+import numpy as np
+np.set_printoptions(legacy='1.13')
+N = int(input())
+b = []
+for i in range(N):
+    b+=([list(map(eval, input().split()))])
+# print(np.array(b))
+print(np.linalg.det(b))

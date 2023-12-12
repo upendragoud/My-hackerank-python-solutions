@@ -1,0 +1,10 @@
+T = int(input())
+for i in range(T):
+    n,d = input().split()
+
+    try:
+        print(int(n)//int(d))
+    except ZeroDivisionError as Z:
+        print(f"Error Code: {Z}")
+    except ValueError as V:
+        print(f'Error Code: {V}')

@@ -1,0 +1,30 @@
+from collections import Counter
+
+n = int(input())
+l = list(map(int, input().split()))
+m = int(input())
+p = [(input()) for i in range(m)]
+# print(p)
+A = []
+B = []
+D = {}
+for i in p:
+    a,b = i.split()
+    A.append(int(a))
+    B.append(int(b))
+# print((A), B)
+for i in list(set(A)):
+    D[i] = []
+# print(D)
+for i in p:
+    a = i.split()
+    D[int(a[0])].append(int(a[1]))
+# print(D)
+C = Counter(l)
+# print(C)
+sums = 0
+for i in list(C.keys()):
+    if i in list(D.keys()):
+        c = sum(D[i][:C[i]])
+        sums += c
+print(sums)

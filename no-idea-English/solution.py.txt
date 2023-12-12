@@ -1,0 +1,15 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+n,m = list(map(int, input().split()))
+k = list(map(int, input().split()))
+A = set(list(map(int, input().split())))
+B = set(list(map(int, input().split())))
+sum = 0
+for i in k:
+    if i in A:
+        sum += 1
+    elif i in B:
+        sum -= 1
+    else:
+        sum += 0
+print(sum)

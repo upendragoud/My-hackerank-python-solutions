@@ -1,0 +1,14 @@
+import re
+pattern = re.compile('[789]+[0-9]{9}')
+n = int(input())
+l = []
+for i in range(n):
+    l.append(input())
+for i in l:
+    if len(i)>10:
+        print('NO')
+    else:
+        if (pattern.findall(i)):
+            print('YES')
+        else:
+            print('NO')

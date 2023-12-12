@@ -1,0 +1,39 @@
+n = int(input())
+l = []
+for i in range(n):
+    names = input()
+    scores = eval(input())
+    a = [names, scores]
+    l.append(a)
+# print(l)
+sdata = sorted(l, key = lambda x:x[-1])
+# print(f'sdata: {sdata}')
+sscores = []
+for i in range(len(sdata)):
+    sscores.append(sdata[i][-1])
+stnames = []
+for i in range(len(sdata)):
+    stnames.append(sdata[i][0])
+# print(f'sscores: {sscores}')
+# print(f'stnames: {stnames}')
+fsmin = min(sscores)
+
+
+if sscores.count(fsmin) != 1:
+    Sscores = sscores[sscores.count(fsmin):]
+    Sstnames = stnames[sscores.count(fsmin):]
+    # print(Sstnames)
+    secmin = min(Sscores)
+    names = sorted(Sstnames[:Sscores.count(secmin)])
+    for i in names:
+        print(i)
+
+
+elif sscores.count(fsmin) == 1:
+    Sscores = sscores[1:]
+    Sstnames = stnames[1:]
+    # print(Sstnames)
+    secmin = min(Sscores)
+    names = sorted(Sstnames[:Sscores.count(secmin)])
+    for i in names:
+        print(i)

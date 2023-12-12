@@ -1,0 +1,6 @@
+import numpy
+
+
+a = numpy.array(list(map(float, input().split())))
+b = float(input())
+print(numpy.polyval(a, b))

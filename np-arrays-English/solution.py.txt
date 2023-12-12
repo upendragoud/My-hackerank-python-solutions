@@ -1,0 +1,10 @@
+
+numpy.set_printoptions(legacy='1.13')
+def arrays(arr):
+    # complete this function
+    # use numpy.array
+    l = []
+    for i in arr:
+        l.append(eval(i))
+    return (numpy.array(l, float)[::-1])
+
