@@ -1,0 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import defaultdict
+N = int(input())
+d = defaultdict()
+for i in range(N):
+    x = input()
+    if x not in d:
+        d[x] = 1
+    else:
+        d[x]+=1
+print(len(d.keys()))
+for i in d.values():
+    print(i, end=' ')

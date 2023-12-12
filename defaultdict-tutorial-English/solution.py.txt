@@ -1,0 +1,12 @@
+from collections import defaultdict
+n,m=map(int,input().split(' '))
+A=[input() for _ in range(n)]
+B=[input() for _ in range(m)]
+D=defaultdict(list)
+for ind,key in enumerate(A):
+  D[key].append(ind+1)
+for j in B:
+  if len(D[j])>0:
+    print(*D[j])
+  else:
+    print(-1)

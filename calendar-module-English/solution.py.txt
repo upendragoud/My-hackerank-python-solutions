@@ -1,0 +1,8 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import calendar
+day = ['Mon', 'Tues', 'Wednes', 'Thurs', 'Fri', 'Satur', 'Sun']
+date = list(map(int, input().split()))
+# print(date)
+day = day[(calendar.weekday(date[-1], date[0], date[1]))].upper() + 'DAY'
+print(day)
+

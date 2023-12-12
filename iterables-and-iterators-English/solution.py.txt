@@ -1,0 +1,14 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import combinations
+N = int(input())
+l = list(input().split())
+K = int(input())
+y = [y for y in combinations(l, K)]
+# print(y)
+k=0
+for i in y:
+    if 'a' in i:
+        k+=1
+a = str(k/len(y)).split('.')
+# print(a)
+print(a[0]+'.'+a[1][:4])

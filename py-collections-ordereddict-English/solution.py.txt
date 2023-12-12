@@ -1,0 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import OrderedDict
+order = OrderedDict()
+N = int(input())
+for i in range(N):
+    x = list((input().rpartition(' ')))
+    if x[0] not in order:
+        order[x[0]] = int(x[-1])
+    else:
+        order[x[0]]+=int(x[-1])
+for i in order.keys():
+    print(i, order[i])
+    

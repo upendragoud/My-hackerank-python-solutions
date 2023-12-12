@@ -1,0 +1,11 @@
+if __name__ == '__main__':
+    N = int(input())
+
+    list1 = []
+    for i in range(N):
+        s, *d = (input().split())
+        d = list(map(int, d))
+        if s != 'print':
+            getattr(list1, s)(*d)
+        else:
+            print(list1)
