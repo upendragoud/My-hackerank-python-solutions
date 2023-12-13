@@ -1,0 +1,14 @@
+N, M = map(int, input().split())
+k = 1
+l = N
+l1 = []
+for i in range(0, N):
+    if i < N//2:
+        print(str((".|.")*k).center(M, "-"))
+        l1.append(str((".|.")*k).center(M, "-"))
+        k += 2
+    elif i == N//2:
+        print("WELCOME".center(M, "-"))
+    else:
+        l -= 2
+        print((str(".|.")*l).center(M, "-"))

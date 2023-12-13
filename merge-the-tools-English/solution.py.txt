@@ -1,0 +1,6 @@
+import textwrap
+def merge_the_tools(string, k):
+    strings = (textwrap.wrap(string, k))
+    for a in strings:
+        print("".join(set(a)))
+
